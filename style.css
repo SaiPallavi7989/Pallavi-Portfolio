@@ -49,11 +49,6 @@
         .sidebar a:hover {
             background-color: #555;
         }
-        /* Main content styling */
-        .image-container {
-            margin-left: 200px; /* Pushes content to the right of the sidebar */
-            padding: 20px;
-        }
 /* Projects */
 body {
     margin: 0;

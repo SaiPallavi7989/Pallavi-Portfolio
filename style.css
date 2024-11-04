@@ -8,17 +8,24 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
+    padding-top: 20px; /* Add padding at the top to prevent content from overlapping */
 }
 
 /* Full-width image styling */
 .image-container img, .continue {
     width: 100%;
     height: 100vh;
-    object-fit: cover;
+    object-fit: contain; /* Ensures the whole image is visible without cropping */
     display: block;
 }
 
-/* Headings of pages */
+/* Section Styling */
+section {
+    padding: 40px 20px;
+    margin-bottom: 40px;
+}
+
+/* Headings */
 .heading {
     font-size: 3em;
     margin: 20px 0;
@@ -214,43 +221,6 @@ body {
     justify-content: flex-start;
 }
 
-.contact-card .icon {
-    font-size: 1.5em;
-    color: #4a90e2;
-}
-
-.contact-card .label {
-    font-size: 1.2em;
-    color: #050505;
-    margin-left: 10px;
-}
-
-.icon-label {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
-}
-
-.icon-image {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-}
-
-.detail {
-    color: #555;
-    font-size: 1.2em;
-}
-
-.detail a {
-    color: #202AED;
-    text-decoration: none;
-}
-
-.detail a:hover {
-    text-decoration: underline;
-}
-
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     .sidebar {
@@ -284,4 +254,3 @@ body {
         font-size: 14px;
     }
 }
-

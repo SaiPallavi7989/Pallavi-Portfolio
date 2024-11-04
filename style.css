@@ -288,3 +288,22 @@ align-items:center;
 .detail a:hover {
     text-decoration: underline; /* Underline on hover for links */
 }
+
+/* Media query for tablets and smaller devices */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hide sidebar on small screens */
+    }
+    .content {
+        margin-left: 0;
+        padding: 10px;
+        width: 100%;
+    }
+    .contact-info {
+        grid-template-columns: 1fr; /* Stack items vertically on small screens */
+    }
+    .heading {
+        font-size: 2em; /* Smaller heading size for mobile */
+    }
+}
+

@@ -288,3 +288,44 @@ align-items:center;
 .detail a:hover {
     text-decoration: underline; /* Underline on hover for links */
 }
+
+/* Styles for smaller screens (e.g., tablets and phones) */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  .sidebar, .content {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* Adjust images and buttons to fit within the screen */
+  img, .button {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/* Styles for extra small screens (e.g., phones) */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+
+  .container {
+    padding: 0 5px;
+  }
+
+  .sidebar, .content {
+    width: 100%;
+  }
+
+  h1{
+    font-size: 1.5em;
+  }
+}

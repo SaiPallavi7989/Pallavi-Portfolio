@@ -242,11 +242,6 @@ align-items:center;
         padding: 10px;
         justify-content: space-around;
     }
-    .image-container{
-        margin-left: 0;
-        padding: 10px;
-        width: 100%;
-    }
     .projects1, .projects2, .certificate1, .certificate2 {
         flex-direction: column;
         gap: 20px;

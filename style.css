@@ -292,7 +292,8 @@ align-items:center;
 /* Media query for tablets and smaller devices */
 @media (max-width: 768px) {
     .sidebar {
-        display: none; /* Hide sidebar on small screens */
+	position: fixed;
+        display: flex;
     }
     .content {
         margin-left: 0;

@@ -8,32 +8,10 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
-    padding-top: 20px; /* Add padding at the top to prevent content from overlapping */
+    padding-top: 20px; /* Padding to prevent content overlap */
 }
 
-/* Full-width image styling */
-.image-container img, .continue {
-    width: 100%;
-    height: 100vh;
-    object-fit: contain; /* Ensures the whole image is visible without cropping */
-    display: block;
-}
-
-/* Section Styling */
-section {
-    padding: 40px 20px;
-    margin-bottom: 40px;
-}
-
-/* Headings */
-.heading {
-    font-size: 3em;
-    margin: 20px 0;
-    text-align: center;
-    color: #7d3c98;
-}
-
-/* Sidebar Styling */
+/* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
@@ -63,17 +41,41 @@ section {
     background-color: #555;
 }
 
-/* Main Content Styling */
+/* Content wrapper for layout with sidebar */
 .content {
-    margin-left: 200px;
+    margin-left: 220px;
     padding: 20px;
+    width: calc(100% - 220px);
+}
+
+/* Section Styling for Clear Separation */
+section {
+    padding: 40px 20px;
+    margin-bottom: 40px;
+}
+
+/* Headings */
+.heading {
+    font-size: 2.5em;
+    margin: 20px 0;
+    text-align: center;
+    color: #7d3c98;
+}
+
+/* Full-width image styling */
+.image-container img, .continue {
+    width: 100%;
+    height: 60vh; /* Adjusts height to viewport for full visibility */
+    object-fit: contain; /* Ensures entire image is visible */
+    display: block;
+    margin: 0 auto;
 }
 
 /* Projects Section */
 .projects1, .projects2 {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
     padding: 20px;
 }
@@ -88,7 +90,6 @@ section {
 
 .project img {
     width: 100%;
-    max-width: 400px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -114,7 +115,7 @@ section {
 .certificate1, .certificate2 {
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 20px;
     justify-content: center;
     padding: 20px;
 }
@@ -129,8 +130,6 @@ section {
 
 .certificate img {
     width: 100%;
-    max-width: 500px;
-    height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
@@ -169,38 +168,9 @@ section {
 }
 
 .contact-description {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-size: 1em;
     color: #050505;
     margin: 10px 0 30px;
-}
-
-/* Resume Button */
-.resume-button-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.resume-text {
-    font-size: 1em;
-    color: #333;
-    margin-right: 10px;
-}
-
-.resume-button {
-    display: inline-block;
-    padding: 10px 20px;
-    color: white;
-    background-color: #4a90e2;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
 }
 
 /* Contact Info Cards */
@@ -221,7 +191,7 @@ section {
     justify-content: flex-start;
 }
 
-/* Media Queries for Responsiveness */
+/* Responsive Layout Adjustments */
 @media (max-width: 768px) {
     .sidebar {
         width: 100%;
@@ -235,22 +205,19 @@ section {
     .content {
         margin-left: 0;
         padding: 10px;
+        width: 100%;
+    }
+    
+    .projects1, .projects2, .certificate1, .certificate2 {
+        flex-direction: column;
+        gap: 20px;
     }
     
     .project, .certificate {
         max-width: 100%;
     }
     
-    .contact-info {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-    
     .heading {
         font-size: 2em;
-    }
-    
-    .project-button, .certificate-button {
-        font-size: 14px;
     }
 }

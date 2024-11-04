@@ -1,16 +1,60 @@
-/* Full-width image styling for the first three images */
+/* Full-width image styling for the first three images 
 .image-container img,
 #about img,
 #skills img {
-    width: 100%; /* Take full width of the screen */
-    height: 100vh; /* Full viewport height */
-    object-fit: cover; /* Crop images to fill container */
+    width: 100%; /* Take full width of the screen
+    height: 100vh; /* Full viewport height 
+    object-fit: cover; /* Crop images to fill container 
+}*/
+.image-container img,
+.continue img {
+    width: calc(100% - 200px);
+    height: 100vh;
+    display: block;
+    margin-left: 200px;
+    object-fit: contain; /* Ensures images are fully visible without cropping */
 }
 
-/* Make sidebar responsive */
+/* Style for the fixed sidebar */
 .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 200px;
+    height: 100vh;
+    background-color: #7d3c98;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 }
+
+/* Adjust the sidebar for smaller screens */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 150px; /* Adjust width for tablets or smaller screens */
+    }
+    .content {
+        margin-left: 150px; /* Pushes content to the right of the smaller sidebar */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        width: 100px; /* Adjust width for very small screens */
+    }
+    .content {
+        margin-left: 100px; /* Pushes content to the right of the narrower sidebar */
+    }
+    
+    /* Optionally, reduce font size for sidebar links on small screens */
+    .sidebar a {
+        font-size: 14px;
+        padding: 8px 0;
+    }
+}
+
 
 /* Main content styling */
 .content {

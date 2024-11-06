@@ -285,6 +285,144 @@ align-items:center;
     
 }
 
+/*-----------------------------------*\
+  #RESPONSIVE CSS FOR PORTFOLIO
+\*-----------------------------------*/
+
+/* General Responsive Styles */
+
+:root {
+  --color-primary: #000000; /* Replace with your primary color */
+  --color-secondary: #f8f9fa; /* Replace with your secondary color */
+  --text-color: #333333;
+  --fs-1: 32px;
+  --fs-2: 24px;
+  --fs-3: 18px;
+  --fs-4: 15px;
+  --border-radius: 8px;
+  --padding-small: 15px;
+  --padding-large: 30px;
+}
+
+/*-----------------------------------*\
+  #BASE STYLES
+\*-----------------------------------*/
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
+  background-color: var(--color-secondary);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  margin: 0 auto;
+  padding: var(--padding-large);
+  max-width: 1200px;
+}
+
+.sidebar {
+  width: 100%;
+  max-width: 300px;
+  padding: var(--padding-large);
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.content {
+  flex-grow: 1;
+  padding: var(--padding-large);
+  background-color: #ffffff;
+  border-radius: var(--border-radius);
+  margin-left: var(--padding-large);
+}
+
+/*-----------------------------------*\
+  #RESPONSIVE STYLES
+\*-----------------------------------*/
+
+/* Larger than 450px screen */
+@media (min-width: 450px) {
+  .sidebar {
+    padding: 20px;
+  }
+  .content {
+    padding: 20px;
+    margin-left: 20px;
+  }
+}
+
+/* Larger than 580px screen */
+@media (min-width: 580px) {
+  :root {
+    --fs-1: 36px;
+    --fs-2: 28px;
+    --fs-3: 20px;
+    --fs-4: 18px;
+  }
+
+  .sidebar {
+    max-width: 280px;
+  }
+
+  .content {
+    padding: 25px;
+    margin-left: 25px;
+  }
+}
+
+/* Larger than 768px screen */
+@media (min-width: 768px) {
+  .sidebar {
+    max-width: 250px;
+    position: sticky;
+    top: 20px;
+    height: 100vh;
+  }
+
+  .content {
+    margin-left: 30px;
+    padding: 30px;
+  }
+}
+
+/* Larger than 1024px screen */
+@media (min-width: 1024px) {
+  :root {
+    --fs-1: 40px;
+    --fs-2: 32px;
+    --fs-3: 24px;
+  }
+
+  .sidebar {
+    max-width: 300px;
+    padding: var(--padding-large);
+    position: sticky;
+  }
+
+  .content {
+    padding: 40px;
+  }
+}
+
+/* Larger than 1250px screen */
+@media (min-width: 1250px) {
+  main {
+    max-width: 1400px;
+  }
+  .sidebar {
+    max-width: 350px;
+  }
+
+  .content {
+    padding: 50px;
+  }
+}
+
+
 .detail a:hover {
     text-decoration: underline; /* Underline on hover for links */
 }

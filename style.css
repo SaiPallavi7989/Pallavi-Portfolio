@@ -1,172 +1,82 @@
-/* Full-width image styling */
-.image-container img{
-    width: calc(100% - 200px);
-    height: 100vh;
-    display: block;
-    margin-left: 200px;
-    object-fit: contain;
-}
-
-.continue{
-    width: calc(100% - 200px);
-    height: 100vh;
-    display: block;
-    margin-left: 200px;
-    object-fit: contain;
-}
-
-/*headings of pages*/
-.heading {
-    font-size: 4em;
-    margin: 20px 0;
-    text-align: center;
-    color: #7d3c98;
-}
-
- /* Style for the fixed sidebar */
-        .sidebar {
-              position: fixed;
-   	      top: 0;
-	      left: 0;
-  	      width: 200px;     
-              height: 100vh;     
-              background-color: #7d3c98;     
-	      display: flex; 
-      	      flex-direction: column;     
-	      justify-content: center;     
-              align-items: center;
-              box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);     
-    }
-
- /* Style for the sidebar links */
-        .sidebar a {
-            color: #fff;
-            margin: 15px 0;
-            font-size: 18px;
-            padding: 10px 0;
-            text-decoration: none;
-            width: 100%;
-            text-align: center;
-            display: block;
-            transition: background-color 0.3s;
-        }
-
-        .sidebar a:hover {
-            background-color: #555;
-        }
-
-        /* Main content styling */
-        .content {
-            margin-left: 200px; /* Pushes content to the right of the sidebar */
-            padding: 20px;
-        }
-
-/* Projects */
-
-body {
+/* Base styling adjustments for responsive design */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-
-.projects1 {
-    
-    display: flex;
-    gap: 15px; /* Space between each project */
-}
-.projects2 {
-    
-    display: flex;
-    gap: 15px; /* Space between each project */
-}
-
-
-.project {
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
 }
 
-.project img {
-    width: 400px; /* Adjust width as needed */
-    height: auto;
-    border-radius: 8px; /* Optional: rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
-}
-.project:first-child {
-    margin-left: 30px; /* Adds 5px space before the first project */
+/* Full-width image styling for projects and certificates */
+.project img, .certificate img {
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintains aspect ratio */
+    object-fit: contain; /* Prevents cropping */
 }
 
-.project-button {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #7d3c98; /* Button background color */
-    color: #ffffff; /* Button text color */
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 16px;
-    transition: background-color 0.3s;
+/* Adjust general content styling */
+.content {
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px; /* Maximum width for large screens */
 }
 
-.project-button:hover {
-    background-color: #0056b3; /* Button hover color */
-}
-
-
-/*certificates*/
-.certificate1 {
-    
-    display: flex;
-    gap: 50px; /* Space between each project */
-}
-
-.certificate2 {
-    
-    display: flex;
-    gap: 50px; /* Space between each project */
-}
-
-
-.certificate {
+/* Sidebar adjustments for small screens */
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #7d3c98;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
-.certificate img {
-    width: 500px; /* Adjust width as needed */
-    height: 250px;
-    border-radius: 8px; /* Optional: rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: add shadow */
-}
-.certificate:first-child {
-    margin-left: 100px; /* Adds 30px space before the first project */
+/* Responsive adjustments for headings */
+.heading {
+    font-size: 3em;
+    margin: 20px 0;
+    text-align: center;
+    color: #7d3c98;
 }
 
-.certificate-button {
-    display: inline-block;
+/* Button styling */
+.project-button, .certificate-button {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #7d3c98; /* Button background color */
-    color: #ffffff; /* Button text color */
+    background-color: #7d3c98;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
     text-align: center;
-    font-size: 16px;
+    font-size: 1em;
     transition: background-color 0.3s;
 }
 
-.certificate-button:hover {
-    background-color: #0056b3; /* Button hover color */
+.project-button:hover, .certificate-button:hover {
+    background-color: #0056b3;
 }
 
+/* Flexbox adjustments for project and certificate layouts */
+.projects1, .projects2, .certificate1, .certificate2 {
+    display: flex;
+    flex-wrap: wrap; /* Wraps items to a new row on smaller screens */
+    justify-content: center; /* Centers items */
+    gap: 15px; /* Spacing between items */
+}
 
-  
-/* Contact Section */
+/* Contact section */
 .contact {
     text-align: center;
     width: 90%;
@@ -177,155 +87,44 @@ body {
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.contact-title {
-    font-size: 2.5em;
-    color: #333;
-}
-
-.contact-description {
-    display: flex;
-justify-content:center;
-align-items:center;
-    font-size: 1.1em;
-    color: #050505;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-/* Resume Button */
-.resume-button-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.resume-text {
-    font-size: 1em;
-    color: #333;
-    margin-right: 10px;
-}
-
-.resume-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1em;
-    color: white;
-    background-color: #4a90e2;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-
-.resume-button .download-icon {
-    margin-left: 5px;
-}
-
-
-/* Contact Info Cards */
+/* Contact info cards */
 .contact-info {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr; /* Two columns on larger screens */
     gap: 20px;
     margin-top: 20px;
 }
 
-.contact-card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.contact-card .icon {
-    font-size: 1.5em;
-    color: #4a90e2;
-}
-
-.contact-card .label {
-    font-size: 1.5em;
-    color: #050505;
-    margin-top: 5px;
-}
-
-
-
-/* Icon and Label Container */
-.icon-label {
-    display: flex;
-    align-items: center; /* Center align icon and label vertically */
-    margin-bottom: 5px;
-}
-
-.icon-image {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px; /* Space between icon and label */
-}
-
-.label {
-    font-weight: bold;
-    color: #333;
-}
-
-/* Detail Link Styling */
-.detail {
-    color: #555;
-    font-size: 1.5em;
-}
-
-.detail a {
-    color: #202AED; /* Link color */
-    text-decoration: none;
-    
-}
-
-.detail a:hover {
-    text-decoration: underline; /* Underline on hover for links */
-}
-
-/* Styles for smaller screens (e.g., tablets and phones) */
+/* Media Queries for Smaller Screens */
 @media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
+    /* Stack sidebar on smaller screens */
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
 
-  .container {
-    padding: 0 10px;
-  }
+    /* Stack project and certificate items vertically */
+    .projects1, .projects2, .certificate1, .certificate2 {
+        flex-direction: column;
+        align-items: center;
+    }
 
-  .sidebar, .content {
-    width: 100%;
-    margin: 0;
-  }
+    /* Reduce heading font size for mobile */
+    .heading {
+        font-size: 2em;
+    }
 
-  /* Adjust images and buttons to fit within the screen */
-  img, .button {
-    width: 100%;
-    max-width: 100%;
-  }
-}
+    /* Contact info grid layout */
+    .contact-info {
+        grid-template-columns: 1fr; /* One column on smaller screens */
+    }
 
-/* Styles for extra small screens (e.g., phones) */
-@media (max-width: 480px) {
-  body {
-    font-size: 12px;
-  }
-
-  .container {
-    padding: 0 5px;
-  }
-
-  .sidebar, .content {
-    width: 100%;
-  }
-
-  h1{
-    font-size: 1.5em;
-  }
+    /* Adjust project and certificate images for mobile */
+    .project img, .certificate img {
+        width: 90%; /* Scale images down for smaller screens */
+    }
 }
